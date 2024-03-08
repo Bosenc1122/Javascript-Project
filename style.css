@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #211414;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    perspective: 1000px;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    border: 2px solid #3498db; /* Border color */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border-color: #2980b9; /* Hovered border color */
+}
+
+.card .card-front,
+.card .card-back {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.card .card-back {
+    background-color: #3498db; /* Front face color */
+    transform: rotateY(180deg);
+}
+
+.card .card-front {
+    transform: rotateY(180deg);
+    background-color: #13a6b4; /* Back face color */
+    display: none; /* Initially hide the image */
+}
+
+.card.flipped .card-back {
+    display: none; /* Hide the front face when flipped */
+}
+
+.card.flipped .card-front {
+    display: block; /* Show the back face when flipped */
+}
+
+/* Optional: Add box-shadow for better visual appearance */
+.card.flipped:hover {
+    transform: rotateY(180deg) scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
