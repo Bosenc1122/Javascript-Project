@@ -7,7 +7,7 @@ I wrote a program for a simple card flipping memory game using javascript.
 It's purpose is to help me learn the language in a fun and interesting way in order to become a better programmer.
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/8GIsUmRKuzQ)
 
 # Development Environment
 
